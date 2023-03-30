@@ -68,51 +68,6 @@ const firebaseConfig = {
 
 
 
-get(child(dbRef, `users/ansh/canteen_owner`)).then((snapshot) => {
-  if (snapshot.exists()) {
-  document.getElementById('Owner').innerHTML = (snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error("error_owner_wala");
-});
-
-
-
-get(child(dbRef, `users/ansh/canteen_name`)).then((snapshot) => {
-  if (snapshot.exists()) {
-  document.getElementById('canteen_n').innerHTML = (snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error("error_cateen_name_Wala");
-});
-
-
-get(child(dbRef, `users/ansh/contact_number`)).then((snapshot) => {
-  if (snapshot.exists()) {
-  document.getElementById('Contact').innerHTML = (snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error("error_contact_number_Wala");
-});
-
-
-get(child(dbRef, `users/ansh/status`)).then((snapshot) => {
-  if (snapshot.exists()) {
-  document.getElementById('status').innerHTML = (snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error("error_canteen_status");
-});
-
-
 function creatingTable(cant_NAME, own_name, stats, cont_numb){
     let trow = document.createElement('tr');
     let td1 = document.createElement('td');
